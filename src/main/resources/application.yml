@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cardex-product-stock-service
+
+server:
+  port: ${port:8800}
+
+
