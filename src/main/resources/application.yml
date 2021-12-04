@@ -1,6 +1,8 @@
 spring:
   application:
     name: cardex-product-stock-service
+  jpa:
+    defer-datasource-initialization: true
 
 server:
   port: ${port:8800}

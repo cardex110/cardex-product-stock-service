@@ -18,12 +18,12 @@ public class ProductStockController {
 @Autowired
     ProductStockRepository repository;
 
-@GetMapping("/check-product-stock/productName/{}/productAvailability/{productAvailability}")
+@GetMapping("/check-product-stock/productName/{productName}/productAvailability/{productAvailability}")
 public ProductStockBean checkProductStock(@PathVariable String productName,
                                           @PathVariable String productAvailability)
 {
 
-    ProductStock productStock=repository.findByProductNamendProductAvailability(productName,productAvailability);
+    ProductStock productStock=repository.findByProductNameAndProductAvailability(productName,productAvailability);
 
     ProductStockBean productStockBean= new ProductStockBean(
             productStock.getId(),
